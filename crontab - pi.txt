@@ -1,0 +1,12 @@
+# 1分毎に気温、湿度、気圧を測定して記録
+
+# 使っていないセンサーはコメントとしてください。
+* * * * * sleep 50 && python /home/pi/tft_THP/BMP280_dataSave04.py
+* * * * * sleep 55 && python /home/pi/tft_THP/AHTx0_dataSave04.py
+@reboot   sleep 10 && python /home/pi/tft_THP/test_THP_1.py 1>log.txt 2>errlog.txt
+
+# logが溜まりすぎると心配なので、定期的に消す
+# 毎週月曜日21:** リネーム
+30 21 * * 2 mv /home/pi/tft_THP/temp_data.txt     /home/pi/tft_THP/temp_data.bak
+30 21 * * 2 mv /home/pi/tft_THP/humdy_data.txt     /home/pi/tft_THP/humdy_data.bak
+30 21 * * 2 mv /home/pi/tft_THP/press_data.txt     /home/pi/tft_THP/press_data.bak

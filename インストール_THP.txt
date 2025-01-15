@@ -1,0 +1,30 @@
+
+2025/01/13
+Bullseye 11.11
+Bookworm 12.8
+
+インストール(以下のライブラリをインストールしてください。)
+sudo apt update
+sudo apt upgrade
+sudo apt-get install fonts-dejavu
+sudo apt-get install fonts-ipafont
+
+git clone https://github.com/momorara/tft_THP
+
+>>i2cデバイスとして認識されているか確認
+i2cdetect -y 1
+
+
+あとは、
+tft_THPのサンプルを実行してみてください。
+ python test_LED.py
+
+
+tft_THPのサンプルを起動してみてください。
+ Python test_THP_1.py
+
+
+test_THP_1.pyを起動時に自動実行するには
+Cronの設定をしてください。
+
+
