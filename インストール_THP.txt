@@ -1,6 +1,7 @@
 
 2025/01/16
 Bullseye 11.11
+Bookworm 12.8
 
 
 インストール(以下のライブラリをインストールしてください。)
@@ -14,17 +15,15 @@ git clone https://github.com/momorara/tft_THP
 >>i2cデバイスとして認識されているか確認
 i2cdetect -y 1
 
-# smbus2のインストール
+# smbus2のインストール Bookwormでは不要
 sudo pip3 install smbus2
 
 あとは、
 tft_THPのサンプルを実行してみてください。
  python test_LED.py
 
-
 tft_THPのサンプルを起動してみてください。
  Python test_THP_1.py
-
 
 test_THP_1.pyを起動時に自動実行するには
 Cronの設定をしてください。
